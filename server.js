@@ -14,7 +14,6 @@ const app = new App({
 /* Add functionality here */
 app.message('udd my stack', async ({ message, say }) => {
     console.log("Showing the user their stack")
-    console.log(message.user)
     const response = await getStackByMemberId(message.user);
     await say(`Your stack is: ${response}`);
 });
